@@ -2,6 +2,7 @@ body {
     background-color:#A00FBE;
     font-family: sans-serif;
     text-align: center;
+    margin: 0px;
 }
 .super-wrapper {
     display: table;

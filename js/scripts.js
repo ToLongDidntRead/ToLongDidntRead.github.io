@@ -12,7 +12,10 @@ var apikey = "921638d2-08e2-4192-b827-edfa0c3a08d5";
 var reload = function(){
   location.reload();
 }
+var state = true;
 var main = function(){
+  if (state) {
+    
   
 var URL_Sentiment = "https://api.havenondemand.com/1/api/sync/analyzesentiment/v1?text="+$("#input").val()+"&apikey=" + apikey;
 	
@@ -61,6 +64,10 @@ var URL_Sentiment = "https://api.havenondemand.com/1/api/sync/analyzesentiment/v
           		console.log(e + "sdfsdf")
           }    
       });
+ }else{
+  alert("Please reload page");
+ }
+ state = !state;
  }
 
 function processJSON(json){
