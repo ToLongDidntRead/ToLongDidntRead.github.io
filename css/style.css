@@ -19,6 +19,7 @@ body {
     transform: translate(-50%, -50%);
 }
 textarea {
+    overflow-y:scroll;
     outline: none;
     resize: none;
     padding:1em;

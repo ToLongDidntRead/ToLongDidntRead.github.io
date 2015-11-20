@@ -84,7 +84,7 @@ function processJSON2(json){
 }
 function processJSON3(json){
 	//console.log(json.concepts[1].concept)
-    if (json.concepts[0].concept !== undefined) {
+    if (json.concepts[0].concept == undefined) {
       $("#output_concepts").text("Concept is: null")
   }else{
     $("#output_concepts").text("Concept is: " + json.concepts[0].concept)
