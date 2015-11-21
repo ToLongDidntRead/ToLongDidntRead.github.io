@@ -9,9 +9,6 @@ var output_text_topic_negative = $("#output_sentiment_topic_negative");
 var apikey = "921638d2-08e2-4192-b827-edfa0c3a08d5";
 /*$("#enter_button").click(function(e) {
 });*/
-var reload = function(){
-  location.reload();
-}
 var state = true;
 var main = function(){
   if (state) {
@@ -51,38 +48,9 @@ var URL_Sentiment = "https://api.havenondemand.com/1/api/sync/analyzesentiment/v
           		console.log(e + "sdfsdf")
           }    
       });
- 	var URL_Concept = "https://api.havenondemand.com/1/api/sync/extractconcepts/v1?text="+ $("#input").val() +"&apikey=" + apikey;
- 	$.ajax({
-          type: 'POST',
-          url: URL_Concept,
-          dataType: 'json',
-          success: processJSON3,
-          error: function(e)
-          {
-          		console.log(e + "sdfsdf")
-          }    
-      });
- var request = require('request');
-
-var headers = {
-    'X-AYLIEN-TextAPI-Application-Key': '80ee6e6995d555c5341da2739cd976a3',
-    'X-AYLIEN-TextAPI-Application-ID': '281e8bb9'
-};
-
-var options = {
-    url: 'https://api.aylien.com/api/v1/summarize',
-    headers: headers
-};
-
-function callback(error, response, body) {
-    if (!error && response.statusCode == 200) {
-        console.log(body);
-    }
-}
-
-request(options, callback);
        }else{
   alert("Please reload page");
+  location.reload();
  }
  state = !state;
  }
